@@ -28,8 +28,12 @@ export default function Listings() {
     }
 
     useEffect(() => {
-        getData(url).then(data => {
-            setData(data);
+        getData(url).then(response => {
+            const transformedData = {
+                ...response,
+                results: response.result,
+            };
+            setData(transformedData);
         })
     }, [url])
 
@@ -43,7 +47,7 @@ export default function Listings() {
             ) : (
                 <>
                     <div className='grid grid-cols-4 gap-6'>
-                        {data.results.map(auction => (
+                        {data.results && data.results.map(auction => (
                             <AuctionCard auction={auction} key={auction.id} />
                         ))}
                     </div>
