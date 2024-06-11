@@ -9,13 +9,13 @@ namespace BiddingService;
 
 [ApiController]
 [Route("api/[controller]")]
-public class BidController : ControllerBase
+public class BidsController : ControllerBase
 {
     private readonly IMapper _mapper;
     private readonly IPublishEndpoint _publishEndpoint;
     private readonly GrpcAuctionClient _grpcClient;
 
-    public BidController(IMapper mapper, IPublishEndpoint publishEndpoint, GrpcAuctionClient grpcClient)
+    public BidsController(IMapper mapper, IPublishEndpoint publishEndpoint, GrpcAuctionClient grpcClient)
     {
         _mapper = mapper;
         _publishEndpoint = publishEndpoint;

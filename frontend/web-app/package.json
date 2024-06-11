@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@microsoft/signalr": "^8.0.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
+    "date-fns": "^3.6.0",
     "flowbite-react": "^0.7.8",
     "next": "^14.2.3",
     "next-auth": "^4.24.7",
